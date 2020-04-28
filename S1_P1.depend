@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1587932254 source:c:\users\omar\codeblocks\a2\s1_p1\main.cpp
+
+1587979391 source:c:\users\omar\codeblocks\a2\s1_p1\test.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<utility>
+	<initializer_list>
+	<exception>
+	<typeinfo>
+

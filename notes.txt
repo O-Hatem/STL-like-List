@@ -1,0 +1,25 @@
+
+/* r-values
+
+    int y = 12;
+    int & r = y;
+
+    cout << y << endl;
+    cout << r << endl;
+
+    cout << &y << endl;
+    cout << &r << endl << endl;
+
+    int && x = 12;
+    cout << x << endl;
+*/
+
+/*
+    int x = 12;
+    int *p  = &x;
+
+    // same output
+    cout << p << endl ;
+    cout << &x << endl;
+    cout << &*p << endl;
+*/
