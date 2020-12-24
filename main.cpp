@@ -3,6 +3,7 @@
 #include <utility> // swap
 #include <initializer_list>
 #include <exception>
+#include <vector>
 using namespace std;
 
 struct after_last_exception : public exception{
@@ -57,15 +58,12 @@ public:
 
            // Deep Copy Ctor ( Problem(deep copy don't work): *(this->value) = *(rhs.value);)
            iterator(const iterator &rhs){
-               cout << "Deep Copy" << endl;
                (this->value) = (rhs.value);
            }
 
            // copy-swap-idiom copy assignment operator
-           // const-reference parameter will be the same as value parameter
            iterator& operator=(const iterator &rhs){
                if (this != &rhs){
-                   cout << "copy-swap-idiom copy assignment operator\n";
                    iterator temp = rhs;
 
                    swap(value, temp.value); // Why this line call the copy ctor
@@ -172,7 +170,7 @@ public:
                }
                return _this;
            }
-   };
+   }; // end of iterator struct
 
    iterator begin() const {return first;}
    iterator end() const {return last;}
@@ -353,11 +351,24 @@ bool isSmaller(int x, int y){
 
 
 int main(){
-   vector<int> v1 = {9,6,7};
-   vector<int> v2 = {9,12,3};
+    List<int> l = {1,2,3,4};
 
-   cout << (v1 <= v2) << endl;
+    List<int>::iterator it = l.begin();
+    cout << *it << endl;
+    it++;
+    cout << *it << endl;
+    it--;
+    cout << *it << endl;
+    it+=2;
+    cout << *it << endl;
+    it-=2;
+    cout << *it << endl;
+
+
 
 
    return 0;
 }
+
+// TODO(not working): it = it + 2;
+// TODO(not working): it = it - 2;
