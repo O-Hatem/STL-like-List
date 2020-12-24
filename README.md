@@ -1,6 +1,6 @@
 # Custom STL List
 
-I created list class and iterator classes to be as close to the STL list and STL iterator as possible
+I created list and iterator classes to be as close to the STL list and STL iterator as possible
 
 * Iterator class
     * constructor
